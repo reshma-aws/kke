@@ -1,0 +1,29 @@
+# Task
+# xFusionCorp Industries has an application running on Nautlitus 
+# infrastructure in Stratos Datacenter. The monitoring tool   
+# recognised  that there is an issue with the haproxy service on LBR 
+# server. That needs to fixed to make the application work properly.
+# Troubleshoot and fix the issue, and make sure haproxy service is 
+# running on Nautilus LBR server.
+
+# Login to LBR server 
+
+$ ssh loki@172.16.238.14
+$ sudo su
+# Check the status of haproxy
+
+systemctl status haproxy.service -l
+
+# Locate the config file
+
+/etc/haproxy/haproxy.cfg
+
+# Looking through the error logs the error is at "default_backend app" not found 
+
+# On closer observation the secion "backend" was commented. For the service to work, you need to uncomment the line 
+
+backend app
+
+# Stop and start the service again
+
+systemctl stop haproxy && systemctl start haproxy
