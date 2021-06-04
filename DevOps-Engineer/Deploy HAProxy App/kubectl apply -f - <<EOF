@@ -1,0 +1,10 @@
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: haproxy-service-account-devops
+  namespace: haproxy-controller-devops
+EOF
+
+
+kubectl create ns haproxy-controller-devops

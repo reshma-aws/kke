@@ -1,0 +1,6 @@
+# Create a user named Jim with a non-interactive shell in the App01 server
+
+thor@jump_host/ $ ssh tony@stapp01
+
+# App server 01
+$ sudo useradd -s /sbin/nologin jim
