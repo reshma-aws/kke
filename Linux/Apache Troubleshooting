@@ -1,0 +1,23 @@
+" Login to App Server 01
+$ ssh tony@stapp01
+
+" Check status of Apache server
+# systemctl status httpd
+
+" It shows error in the config file. 
+/etc/httpd/conf/httpd.conf
+
+" Rectify the error
+ServerRoot "/etc/httpd"
+
+" Restart the service 
+# systemctl status httpd
+
+" Check from jump server if the service is working 
+# curl http://stapp01:6300/
+
+" Repeat the above steps for all App Servers. Remember each server can have error in different lines.
+
+TIP: To go to a particular line in vi editor
+
+: <line number>
