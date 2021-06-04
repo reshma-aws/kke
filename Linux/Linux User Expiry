@@ -1,0 +1,12 @@
+" Create temporary user with expiration date 
+
+" Login to App Server 01
+
+$ ssh tony@stapp01
+
+" Add the new user with expiry date
+$ sudo useradd -e 2021-01-28 anita
+
+" Check if the user exists in the system 
+
+$ get ent passwd | grep anita

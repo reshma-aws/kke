@@ -1,0 +1,12 @@
+" Login to App Server 01
+$ ssh tony@stapp01
+$ sudo su
+
+" Create a new group - 1011 is the group ID
+# groupadd -g 1011 nautilus_admin_users
+
+" Add user to group 
+# useradd -g nautilus_admin_users stark
+
+" Check if the user is created
+#getent passwd | grep stark

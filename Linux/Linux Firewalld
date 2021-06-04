@@ -1,0 +1,13 @@
+# Open all incoming connections on 5003/tcp 
+# Zone should be in public
+
+# Login to Backup Server 
+
+$ ssh clint@stbkp01
+$ sudo su
+
+# firewall-cmd --zone=public --add-port=5003/tcp
+
+" Validate the URL
+$ curl localhost:5003
+

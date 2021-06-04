@@ -1,0 +1,12 @@
+" Login to storage server 
+$ ssh natasha@ststor01
+
+" Compress the folder ravi by going to data folder
+# cd /data
+# tar -zcf ravi.tar.gz ravi
+
+" Examine the contents of the tar file
+# tar -tf ravi.tar.gz
+
+" Move the folder to destination
+# mv ravi.tar.gz /home
