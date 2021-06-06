@@ -1,0 +1,19 @@
+Task: Repace "String" with "Architecture" in root/nautilus.xml in Backup Server
+
+" Login to Backup Server
+$ ssh clint@stabkp01
+$ sudo su
+
+" Edit the file in vi editor
+# vi /root/nautilus.xml
+
+" Replace "String" with "Architecture". Since vi does not show line number activate them first
+ESC 
+:set number <ENTER>
+
+" Search and replace string from line 1 to last line
+:1,832s/String/Architecture/g <ENTER>
+
+or best is to use a command directly from the CLI instead of editing in vi editor
+
+# sed -i 's/String/Architecture/g' /root/nautilus.xml

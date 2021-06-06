@@ -1,0 +1,16 @@
+" Login to App Server 1
+$ ssh tony@stapp01
+$ sudo su
+
+" Install selinux package
+# yum install selinx -you
+
+" Get system status of selinux
+# sestatus
+
+" Go to /etc/selinux/config and edit the following
+
+Change SELINUS -> enforcing to disabled
+
+" Check status again
+# sestatus

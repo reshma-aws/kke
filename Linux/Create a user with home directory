@@ -1,0 +1,7 @@
+" Login to App Server 02
+$ ssh steve@stapp02
+$ sudo su
+
+" Create user without home directory
+
+# useradd --no-create-home siva

@@ -1,0 +1,17 @@
+" Login to App Server 01
+$ ssh tony@stapp01
+$ sudo su
+
+" Install cups package
+# yum install cups -y 
+
+" Write script in path /etc/init.d/cups
+# vi cups
+
+#!/bin/bash
+systemctl restart cups
+
+" Change mode of file to run on reboot
+# chmod +x /etc/init.d/cups
+
+" Repeat the steps in App Servers 2 and 3

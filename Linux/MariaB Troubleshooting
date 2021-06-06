@@ -1,0 +1,12 @@
+" Login to DB Server
+$ ssh peter@stdb01
+$ sudo su
+
+" Check status of mariadb
+# systemctl status mariadb.service
+
+" Install mysql
+# yum install mysql
+
+" Start and check status of mariadb
+# systemctl start mariadb.service && systemctl status mariadb.service

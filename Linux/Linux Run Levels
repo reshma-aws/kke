@@ -1,0 +1,24 @@
+" Login to App Server 1
+$ ssh tony@stapp01
+$ sudo su
+
+" Run command to check default run level
+# systemctl get-default
+
+" Run command to change the target
+# systemctl set-default graphical.target
+
+" Start the service
+# systemctl start graphical.target
+
+" Repeat on all App Servers
+
+
+Run levels
+==========
+A run level is a state of init and the whole system that defines what system services are operating. Run levels are identified by numbers. Some system administrators use run levels to define which subsystems are working, e.g., whether X is running, whether the network is operational, and so on.
+
+Whenever a LINUX system boots, firstly the init process is started which is actually responsible for running other start scripts which mainly involves initialization of you hardware, bringing up the network, starting the graphical interface.
+Now, the init first finds the default runlevel of the system so that it could run the start scripts corresponding to the default run level.
+A runlevel can simply be thought of as the state your system enters like if a system is in a single-user mode it will have a runlevel 1 while if the system is in a multi-user mode it will have a runlevel 5.
+A runlevel in other words can be defined as a preset single digit integer for defining the operating state of your LINUX or UNIX-based operating system. Each runlevel designates a different system configuration and allows access to different combination of processes.

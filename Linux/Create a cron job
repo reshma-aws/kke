@@ -1,0 +1,30 @@
+Task: 
+====
+1. Install cronie package
+2. Add a cron */5 * * * * echo hello > tmp/cron_text 
+
+" Login to App 01 Server
+$ ssh tony@stapp01
+$ sudo su
+
+" Install cronie package
+# yum install cronie -y
+
+" Start and check cron service
+# systemctl start crond.service
+# systemctl status crond.service
+
+" Create cron job
+# crontab -e
+ in the vi editor type 
+
+*/5 * * * * echo hello > tmp/cron_text 
+
+" Check cron job
+# cronjob -labels
+
+" Check cron job for root
+# crontab -u root -l
+
+
+Repeat for other App Servers 
